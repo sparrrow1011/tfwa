@@ -20,7 +20,7 @@
     --logo-body: #00d8fe;
     --background-footer: #008146;
     --link: #002F54;
-    --span-bg: linear-gradient(to right, #4e4e9e, #097fa5, #3e87ed);
+    --span-bg: linear-gradient(to right, #ff5a5a, #deb043, #1eb175, #5da8e2);
   }
   .dark {
     --primary: #f5f6fc;
@@ -39,7 +39,7 @@
     --logo-body: #097fa5;
     --background-footer: #008146;
     --link: #f5f6fc;
-    --span-bg: linear-gradient(to right, #8c00ff, #0fb4e1, #a1d930, #ae0000);
+    --span-bg: linear-gradient(to right, #ff5a5a, #deb043, #1eb175, #5da8e2);
   }
   .sunset {
     --primary: #ff6b6b;
@@ -219,9 +219,14 @@
   height: 100%;
 }
 
-.orange { background-color: #AE4E2E; }
-.yellow { background-color: #E0C700; }
-.green { background-color: #008146; }
+.nav-bar--hidden {
+  transform: translateY(-100%);
+}
+
+.orange { background-color: #ff5a5a; }
+.yellow { background-color: #deb043; }
+.green { background-color: #1eb175; }
+.blue { background-color: #5da8e2; }
 
 .hover\:bg-color-1:hover {
   --tw-bg-opacity: 1;

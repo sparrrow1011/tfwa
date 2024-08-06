@@ -5,7 +5,7 @@ import {
   NextIntlClientProvider,
   useMessages
 } from 'next-intl'
-import { Inter, Rubik, Space_Grotesk } from 'next/font/google'
+import {Inter, Rubik, Source_Sans_3, Space_Grotesk} from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
 import { Header } from './components/header/Header'
 import './globals.css'
@@ -22,6 +22,10 @@ const rubik = Rubik({
 const space_grotesk = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-space-grotesk'
+})
+const sourceSans3 = Source_Sans_3({
+    subsets: ['latin'],
+    variable: '--font-source-sans-3'
 })
 export const metadata: Metadata = {
   title: 'TFWA',
@@ -40,7 +44,7 @@ export default function RootLayout({
     <html
       lang={locale}
       dir={'ltr'}
-      className={`${space_grotesk.variable} ${rubik.variable} scroll-smooth`}
+      className={`${sourceSans3.className} ${rubik.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <body>
@@ -65,11 +69,11 @@ export default function RootLayout({
               easing='ease'
               speed={200}
               shadow='0 0 10px #2299DD,0 0 5px #2299DD'
-              color='var(--primary)'
+              color='var(--span-bg)'
               showSpinner={false}
             />
             <Header locale={locale} />
-            <main className='mx-auto max-w-screen-2xl'>{children}</main>
+            <main className='mx-auto max-w-screen-2xl mt-20 md:mt-28 lg:mt-44'>{children}</main>
             <Footer/>
           </NextIntlClientProvider>
         </ThemeProvider>

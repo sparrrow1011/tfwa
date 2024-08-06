@@ -13,8 +13,10 @@ import {usePathname} from "next/navigation";
 import {FiUserPlus} from "react-icons/fi";
 import {MobileMenuInterface} from "../../components/interfaces";
 import {IoIosArrowDown, IoIosArrowForward} from "react-icons/io";
+import {useTranslations} from "next-intl";
 
 const MobileMenu = ({setIsMobile, isMobile, navigation}:MobileMenuInterface) => {
+    const t = useTranslations('Navigation')
     const [isCountries, setIsCountries] = React.useState(false);
     const [isAnalytics, setIsAnalytics] = React.useState(false);
 
@@ -46,14 +48,14 @@ const MobileMenu = ({setIsMobile, isMobile, navigation}:MobileMenuInterface) => 
                                 return (
                                     <div
                                         key={item.name}
-                                        className={`relative color-1 text-sm my-4 hover:text-main `}
+                                        className={`relative text-sm my-4 `}
                                     >
-                                        {item.name === 'Countries' ? (
+                                        {item.name === `${t('Countries')}` ? (
                                             <span onClick={()=>setIsCountries(true)} className={'flex gap-1 items-center cursor-pointer'}>
                                             Countries
                                             <IoIosArrowForward width={10}/>
                                         </span>
-                                        ) : item.name === 'Analytics' ? (
+                                        ) : item.name === `${t('Analytics')}` ? (
                                             <span onClick={()=>setIsAnalytics(true)} className={'flex gap-1 items-center cursor-pointer'}>
                                             Analytics
                                             <IoIosArrowForward width={10}/>

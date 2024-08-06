@@ -1,7 +1,7 @@
 'use client'
 import { Link } from '@/src/navigation'
 import { useTranslations } from 'next-intl'
-import React, {FC, useState} from 'react'
+import React, {FC, useEffect, useState} from 'react'
 import GithubIcon from '../../../icons/github'
 import LogoIcon from '../../../icons/logo'
 import LangSwitcher from '../LangSwitcher'
@@ -11,6 +11,7 @@ import {CustomSearch, Language, Line, LoginButton, LogoImage, NavLink} from "@/s
 import {IoMdMenu} from "react-icons/io";
 import {usePathname} from "next/navigation";
 import MobileMenu from "@/src/app/[locale]/components/header/mobileMenu";
+import useScroll from "@/src/app/[locale]/components/useScroll";
 interface Props {
   locale: string
 }
@@ -18,7 +19,8 @@ export const Header: FC<Props> = ({ locale }) => {
   const t = useTranslations('Navigation')
 
   const [isMobile, setIsMobile] = useState(false);
-
+  const [navClassList, setNavClassList] = useState<string[]>([]);
+  const scroll = useScroll();
   const navigation = [
     { name:  `${t('Home')}`, href: '/', external: false },
     { name: `${t('Countries')}`, href: '/countries', external: false },
@@ -35,8 +37,17 @@ export const Header: FC<Props> = ({ locale }) => {
     return pathname === '/' ? link : removeSlash(link);
   };
 
+  // update classList of nav on scroll
+  useEffect(() => {
+    const _classList = [];
+
+    if (scroll.y > 250 && scroll.y - scroll.lastY > 0)
+      _classList.push("nav-bar--hidden");
+    setNavClassList(_classList);
+  }, [scroll.y, scroll.lastY]);
+
   return (
-      <>
+      <nav className={`z-20 top-0 fixed w-full transition-transform duration-300 ${navClassList.join(" ")}`}>
         {isMobile && <MobileMenu setIsMobile={setIsMobile } isMobile={isMobile} navigation={navigation}/>}
         <div className={`menu-background flex flex-col md:container mx-auto items-center align-bottom justify-between z-50`}>
           <div className={`flex w-full align-bottom justify-between py-5 lg:py-10 `}>
@@ -90,7 +101,6 @@ export const Header: FC<Props> = ({ locale }) => {
           </div>
           <Line/>
         </div>
-        <Line/>
-      </>
+      </nav>
   )
 }

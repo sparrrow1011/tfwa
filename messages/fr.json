@@ -5,7 +5,12 @@
     "Analytics": "Analytique",
     "Events": "Événements",
     "Training": "Formation",
-    "Theme": "Thème"
+    "Theme": "Thème",
+    "Explore": "Explorer les Pages des Pays",
+    "Performance_Indicators": "Indicateurs de Performance",
+    "Explore_TF_Analytics": "Explorer les Analyses de Facilitation du Commerce",
+    "Regional_Trends": "Tendances Régionales",
+    "Governance": "Gouvernance"
   },
   "Footer": {
     "Quick_Links": "Liens Rapides",
@@ -29,6 +34,37 @@
     "Address": "1 Abidjan St. 10193, Sarasota, voie du Cambodge, Ghana.",
     "copy_right": "Ecowas TFWA. Tous droits réservés."
   },
+
+  "HomePage": {
+    "Banner_text_1": "Facilitação do Comércio Melhorada para a África Ocidental",
+    "Banner_text_2": "Aumentar as capacidades de tomada de decisão dos Estados Membros da África Ocidental para conduzir suas reformas de facilitação do comércio com fácil acesso a dados e conjuntos de dados de referência de qualidade.",
+    "Button_1": "Explorar Base de Conhecimento",
+    "Item_1": "Estados membros da CEDEAO que ratificaram o Acordo de Facilitação do Comércio da OMC. Número de comitês nacionais de facilitação do comércio estabelecidos.",
+    "Item_2": "Estados membros da CEDEAO mantendo suas notificações de arranjos com doadores atualizadas.",
+    "Item_3": "Comitês nacionais de facilitação do comércio da CEDEAO com um grupo de trabalho de Comércio e Gênero",
+    "Item_4": "Participação feminina nas atividades regionais de capacitação em facilitação do comércio",
+    "section_2_title": "Os Conjuntos de Dados Certos Para um Progresso no Mundo Real",
+    "section_2_text": "O Sistema de Monitoramento da Facilitação do Comércio é projetado para atender às necessidades de todos os interessados no comércio que buscam dados atuais, relevantes e oportunos sobre facilitação do comércio para a região da África Ocidental.\n\nEle fornece painéis e análises para a tomada de decisões informadas e uma coordenação aprimorada nos níveis nacional e intra-regional, e com os parceiros internacionais."
+  },
+  "Benin": "Benim",
+  "Burkina_Faso": "Burkina Faso",
+  "Cape_Verde": "Cabo Verde",
+  "Gambia": "Gâmbia",
+  "Ghana": "Gana",
+  "Guinea": "Guiné",
+  "Guinea_Bissau": "Guiné-Bissau",
+  "Ivory_Coast": "Costa do Marfim",
+  "Liberia": "Libéria",
+  "Mali": "Mali",
+  "Niger": "Níger",
+  "Nigeria": "Nigéria",
+  "Senegal": "Senegal",
+  "Sierra_Leone": "Serra Leoa",
+  "Togo": "Togo",
+
+
+  "Explore_Knowledge_Database": "Explorer la Base de Connaissances",
+  "Take_Questionnaire": "Faire le questionnaire",
 
   "An": "Un",
   "Booster": "Booster",

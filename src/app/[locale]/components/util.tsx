@@ -124,7 +124,6 @@ export const Language = ({isMobile}:any) => {
     const handleLanguageChange = async (language: LanguageInterface) => {
         setSelectedLanguage(language);
         localStorage.setItem('selectedLanguage', JSON.stringify(language));
-        // Programmatically navigate to the new locale
         window.location.href = `/${language.code}/${urlSegments.join('/')}`;
     };
 
@@ -135,7 +134,7 @@ export const Language = ({isMobile}:any) => {
                     <Listbox.Button
                         className="relative w-full flex justify-between items-center cursor-pointer rounded-full bg-button py-2 pl-3 pr-3 text-left focus:outline-none text-sm">
                     <span className="block truncate">
-                        <span className={`flex gap-3`}>
+                        <span className={`flex gap-3 text-gray-600`}>
                             <Image src={selectedLanguage.flag} alt={selectedLanguage.country} width={20} height={20}/>
                             {!isMobile && selectedLanguage.country}
                         </span>

@@ -6,13 +6,15 @@ import Image from "next/image";
 import React from "react";
 import {MegaMenuInterface} from "@/src/app/[locale]/components/interfaces";
 import {TopicDisplay} from "@/src/app/[locale]/components/util";
+import {useTranslations} from "next-intl";
 
 export const MegaMenuAnalytics = ({ name, isMobile }: MegaMenuInterface) => {
+    const t = useTranslations('Navigation')
     const links = [
-        {href: '/performance-indicators', label: 'Performance Indicators'},
-        {href: '/regional-trends', label: 'Regional Trends'},
-        {href: '/traning', label: 'CB and Training'},
-        {href: '/governance', label: 'Governance'},
+        {href: '/performance-indicators', label: `${t('Performance_Indicators')}`},
+        {href: '/regional-trends', label: `${t('Regional_Trends')}`},
+        {href: '/training', label: `${t('Training')}`},
+        {href: '/governance', label: `${t('Governance')}`},
     ]
     const pathname = usePathname()
     return (
@@ -28,7 +30,7 @@ export const MegaMenuAnalytics = ({ name, isMobile }: MegaMenuInterface) => {
                     <div className="menu-background shadow-xl flex container mx-auto p-10">
                         <div className={`flex gap-4 justify-between`}>
                             <div className={`w-6/12 flex justify-between`}>
-                                <p className={`font-bold color-1`}>Explore Trade Facilitation Analytics</p>
+                                <p className={`font-bold color-1`}>{t('Explore_TF_Analytics')}</p>
                                 <div className={`flex flex-col border-r-gray-200 gap-7`}>
                                     {links.map((link) => (
                                         <MenuItem key={link.href} >
@@ -43,14 +45,14 @@ export const MegaMenuAnalytics = ({ name, isMobile }: MegaMenuInterface) => {
                                     image={'/nav/image1.png'}
                                     topic={'Search: UN Global Survey on Digital and Sustainable Trade Facilitation 2021'}
                                     text={'Use the search feature to get filtered data on relevant topics.'}
-                                    buttonText={'Explore Knowledge Database'}/>
+                                    buttonText={t('Explore_Knowledge_Database')}/>
                             </div>
                             <div className={`w-4/12 px-5`}>
                                 <TopicDisplay
                                     image={'/nav/image2.png'}
                                     topic={'Take the MM Self-Assessment Questionnaire'}
                                     text={'Fill in the quick self assessment form and receive an instant report and action plan.'}
-                                    buttonText={'Take Questionnaire'}/>
+                                    buttonText={t('Take_Questionnaire')}/>
                             </div>
 
 
@@ -65,11 +67,12 @@ export const MegaMenuAnalytics = ({ name, isMobile }: MegaMenuInterface) => {
 }
 
 export const MegaMenuAnalyticsMobile = ({ setIsAnalytics }: any) => {
+    const t = useTranslations('Navigation')
     const links = [
-        {href: '/performance-indicators', label: 'Performance Indicators'},
-        {href: '/regional-trends', label: 'Regional Trends'},
-        {href: '/traning', label: 'CB and Training'},
-        {href: '/governance', label: 'Governance'},
+        {href: '/performance-indicators', label: `${t('Performance_Indicators')}`},
+        {href: '/regional-trends', label: `${t('Regional_Trends')}`},
+        {href: '/training', label: `${t('Training')}`},
+        {href: '/governance', label: `${t('Governance')}`},
     ]
     const pathname = usePathname()
     return (
@@ -104,8 +107,9 @@ export const MegaMenuAnalyticsMobile = ({ setIsAnalytics }: any) => {
 }
 
 export const MegaMenuCountries = ({ name, isMobile }: MegaMenuInterface) => {
+    const t = useTranslations('Navigation')
     const links = [
-        {href: '/benin', label: 'Benin', code: 'BJ', flag: '/flags/BJ.png'},
+        {href: '/benin', label: `${t('Benin')}`, code: 'BJ', flag: '/flags/BJ.png'},
         {href: '/burkina-faso', label: 'Burkina Faso', code: 'BF', flag: '/flags/BF.png'},
         {href: '/cabo-verde', label: 'Cabo Verde', code: 'CV', flag: '/flags/CV.png'},
         {href: '/cote-d-ivoire', label: 'Cote Divoire', code: 'CI', flag: '/flags/CI.png'},

@@ -5,7 +5,12 @@
     "Analytics": "Analytics",
     "Events": "Events",
     "Training": "Training",
-    "Theme": "Theme"
+    "Theme": "Theme",
+    "Explore": "Explore Country Pages",
+    "Performance_Indicators": "Performance Indicators",
+    "Explore_TF_Analytics": "Explore Trade Facilitation Analytics",
+   "Regional_Trends": "Regional Trends",
+    "Governance": "Governance"
   },
   "Footer": {
     "Quick_Links": "Quick Links",
@@ -38,9 +43,28 @@
     "Item_2": "ECOWAS MS keeping their donor arrangements notifications up-to-date.",
     "Item_3": "ECOWAS NTFCs having a Trade & Gender working group",
     "Item_4": "Female participation to regional TF Capacity Building activities",
-    "section_2_title": "Our Services",
-    "section_2_text": "We provide a"
+    "section_2_title": "The Right Data-Sets\nFor Real-World Progress",
+    "section_2_text": "The Trade Facilitation Monitoring System is designed to meet the needs of all trade stakeholders searching for current, relevant, and timely trade facilitation-related data for the West Africa Region. \n\nIt provides dashboards and analytics for informed decision making and enhanced coordination at the national and intra- regional levels, and with the international partners."
   },
+  "Benin": "Benin",
+  "Burkina_Faso": "Burkina Faso",
+    "Cape_Verde": "Cape Verde",
+    "Gambia": "Gambia",
+    "Ghana": "Ghana",
+    "Guinea": "Guinea",
+    "Guinea_Bissau": "Guinea Bissau",
+    "Ivory_Coast": "Ivory Coast",
+    "Liberia": "Liberia",
+    "Mali": "Mali",
+    "Niger": "Niger",
+    "Nigeria": "Nigeria",
+    "Senegal": "Senegal",
+    "Sierra_Leone": "Sierra Leone",
+    "Togo": "Togo",
+
+
+  "Explore_Knowledge_Database": "Explore Knowledge Database",
+  "Take_Questionnaire": "Take Questionnaire",
   "An": "A",
   "Booster": "Booster",
   "to_Your_NextJS_Apps": "to Your NextJS Apps",
