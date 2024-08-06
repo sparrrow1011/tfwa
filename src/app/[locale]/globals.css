@@ -4,12 +4,13 @@
 
 @layer base {
   :root {
-    --primary: #333366;
+    --primary: #002F54;
     --secondary: #097fa5;
-    --background: #ededed;
+    --background: #ffffff;
     --background-secondary: #c8dde3;
     --button: #097fa5;
-    --button-text: #fff;
+    --background-button: #ececec;
+    --button-text: #002F54;
     --text-secondary: #3c3c3c;
     --dropdown: #e0f4ff;
     --dropdown-hover: #b3e5ff;
@@ -17,15 +18,18 @@
     --selected: #9ec6ff;
     --logo-shadow: #053949;
     --logo-body: #00d8fe;
+    --background-footer: #008146;
+    --link: #002F54;
     --span-bg: linear-gradient(to right, #4e4e9e, #097fa5, #3e87ed);
   }
   .dark {
-    --primary: #d6deff;
+    --primary: #f5f6fc;
     --secondary: #0ba6d1;
-    --background: #121212;
+    --background: #232323;
     --background-secondary: #1b1b1b;
     --button: #097fa5;
-    --button-text: #fff;
+    --background-button: #ececec;
+    --button-text: #002F54;
     --text-secondary: #bbbbbb;
     --dropdown: #2d2d2d;
     --dropdown-hover: #454545;
@@ -33,6 +37,8 @@
     --selected: #324e70;
     --logo-shadow: #0a2e36;
     --logo-body: #097fa5;
+    --background-footer: #008146;
+    --link: #f5f6fc;
     --span-bg: linear-gradient(to right, #8c00ff, #0fb4e1, #a1d930, #ae0000);
   }
   .sunset {
@@ -169,5 +175,112 @@
   }
   body {
     @apply bg-background text-primary;
+  }
+}
+
+
+.main-logo {
+  max-width: 150px !important;
+}
+
+.footer-logo {
+  max-width: 200px !important;
+}
+
+.menu-background {
+  background-color: var(--background);
+}
+
+.bg-button {
+  background-color: var(--background-button);
+}
+
+.bg-footer {
+  background-color: var(--background-footer);
+  color: white;
+}
+
+.button-color {
+  background-color: #002F54;
+}
+
+.multi-color-line {
+  display: flex;
+  width: 100%;
+  height: 1px;
+}
+
+.link-color {
+  color: var(--link);
+}
+
+.color-segment {
+  flex: 1;
+  height: 100%;
+}
+
+.orange { background-color: #AE4E2E; }
+.yellow { background-color: #E0C700; }
+.green { background-color: #008146; }
+
+.hover\:bg-color-1:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb( 47 84 100 / var(--tw-bg-opacity));
+}
+
+.hover\:border-color-1:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 47 84 100 / var(--tw-border-opacity));
+}
+
+.hover\:text-color-1:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 47 84 100 / var(--tw-text-opacity));
+}
+
+.border-color-1 {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 47 84 100 / var(--tw-border-opacity));
+}
+
+@media (min-width: 640px) {
+  .main-logo {
+    max-width: 150px !important;
+  }
+  .footer-logo {
+    max-width: 200px !important;
+  }
+  .multi-color-line {
+    display: flex;
+    width: 100%;
+    height: 1px;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-logo {
+    max-width: 250px !important;
+  }
+  .footer-logo {
+    max-width: 200px !important;
+  }
+  .multi-color-line {
+    display: flex;
+    width: 100%;
+    height: 4px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-logo {
+    max-width: 300px !important;
+  }
+  .footer-logo {
+    max-width: 200px !important;
+  }
+  .multi-color-line {
+    display: flex;
+    width: 100%;
+    height: 4px;
   }
 }

@@ -1,0 +1,46 @@
+{
+  "Navigation": {
+    "Home": "Início",
+    "Countries": "Países",
+    "Analytics": "Análise",
+    "Events": "Eventos",
+    "Training": "Treinamento",
+    "Theme": "Tema"
+  },
+  "Footer": {
+    "Quick_Links": "Links Rápidos",
+    "Home": "Início",
+    "Countries": "Países",
+    "Analytics": "Análises",
+    "Events": "Eventos",
+    "Training": "Treinamento",
+    "Database": "Banco de Dados",
+    "TF_Analytics": "Análises TF",
+    "TF_Knowledge_Center": "Centro de Conhecimento TF",
+    "TF_Governance": "Governança TF",
+    "Maturity_Model": "Modelo de Maturidade",
+    "Legal": "Legal",
+    "Terms_of_Service": "Termos de Serviço",
+    "Privacy_Policy": "Política de Privacidade",
+    "External": "Externo",
+    "Ecowas_Website": "Site da Ecowas",
+    "TFWA_Main": "TFWA Principal",
+    "Contact_Us": "Fale Conosco",
+    "Address": "1 Abidjan St. 10193, Sarasota, Cambodia way, Gana.",
+    "copy_right": "Ecowas TFWA. Todos os direitos reservados."
+  },
+
+  "An": "Um",
+  "Booster": "Impulsionador",
+  "to_Your_NextJS_Apps": "para suas apps NextJS",
+  "An_approachable_performant_and_versatile_boilerplate_for_building_SSR_applications": "Um boilerplate acessível, performático e versátil para construir aplicações SSR.",
+  "Use_Template": "Usar Modelo",
+  "Learn_More": "Saiba Mais!",
+  "Approachable": "Acessível",
+  "Add_components_without_sending_additional_client_side_JavaScript_Built_on_the_latest_React_features": "Adicione componentes sem enviar JavaScript adicional para o lado do cliente. Baseado nos últimos recursos do React.",
+  "Automatic_Image_Font_and_Script_Optimizations_for_improved_UX_and_Core_Web_Vitals": "Otimizações automáticas de imagem, fonte e script para melhorar a UX e os Core Web Vitals.",
+  "Versatile": "Versátil",
+  "A_rich_incredibly_adoptable_template_that_scales_between_a_small_showcase_website_and_a_full_size_app": "Um modelo rico e incrivelmente adaptável que escala entre um pequeno site de vitrine e um aplicativo completo.",
+  "This_is_a_simple_about_page_just_to_show_how_you_can_use_the_internationalization_in_different_pages": "Esta é uma página sobre simples, apenas para mostrar como você pode usar a internacionalização em diferentes páginas.",
+  "Performant": "Performático"
+}

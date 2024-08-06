@@ -8,7 +8,7 @@ import { useOnClickOutside } from 'usehooks-ts'
 import Button from './Button'
 
 export default function ThemeSwitch() {
-  const t = useTranslations('')
+  const t = useTranslations('Navigation')
   const [mounted, setMounted] = useState(false)
   const [isOpen, setIsOpen] = useState(false) // New state to control dropdown visibility
   const { setTheme, resolvedTheme, themes, theme } = useTheme()
@@ -20,7 +20,7 @@ export default function ThemeSwitch() {
       <Button
         size='small'
         type='button'
-        className='text-destructive inline-flex w-fit min-w-[95px] items-center justify-between gap-3'
+        className='text-destructive inline-flex w-fit min-w-[95px] items-center justify-between gap-3 z-50'
         id='options-menu'
         aria-expanded={isOpen}
         onClick={() => {}}
