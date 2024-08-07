@@ -1,8 +1,9 @@
 import Image from "next/image";
-import logo from '../../../../public/nav/logo.png';
-import logo_w from '../../../../public/nav/logo-w.png';
+import logo from '@/public/img/nav/logo.png';
+import logo_w from '@/public/img/nav/logo-w.png';
 import {
-    CustomButtonInterface, FooterLinkInterface,
+    ColorCardInterface,
+    CustomButtonInterface, FooterLinkInterface, GraphCardInterface,
     LanguageInterface,
     LogoInterface, NavLinkInterface,
     SearchInterface
@@ -12,17 +13,18 @@ import {IoIosArrowDown, IoIosArrowForward} from "react-icons/io";
 import {GoArrowRight} from "react-icons/go";
 import {Listbox, Menu, MenuButton, MenuItem, MenuItems} from "@headlessui/react";
 import {FiUserPlus} from "react-icons/fi";
+import { BsThreeDotsVertical } from "react-icons/bs";
 import Link from "next/link";
 import {usePathname, useSelectedLayoutSegments} from "next/navigation";
 import {useRouter} from "next/navigation";
+import { useTheme } from 'next-themes'
 
 export const LogoImage = ({alt, light}: LogoInterface) => {
+    const { setTheme, resolvedTheme, themes, theme } = useTheme()
     return (
         <>
-            {!light ? <Image src={logo} alt={alt}/>: <Image src={logo_w} alt={alt}/>}
+            {light ? <Image src={logo_w} alt={alt}/> : theme =='light' ? <Image src={logo_w} alt={alt}/> : !light ?<Image src={logo} alt={alt}/>:''}
         </>
-
-
     );
 }
 
@@ -72,6 +74,18 @@ export const CustomButton2 = ({icon, text, onClick, reverse, border}: CustomButt
     );
 }
 
+export const CustomButton3 = ({icon, text, onClick, reverse, border}: CustomButtonInterface) => {
+    return (
+        <button onClick={onClick}
+                className={`flex self-start items-center h-10 backdrop-filter backdrop-blur-sm bg-white border border-color-1 bg-opacity-0 color-1 hover:bg-color-1 hover:text-white 
+                gap-2 rounded-full px-5 ${reverse ? 'flex-row-reverse' : ''}`}>
+            {icon}
+            <span className={`whitespace-nowrap`}>
+                {text}
+            </span>
+        </button>
+    );
+}
 
 export const LoginButton = ({isMobile}:any) =>{
     return(
@@ -148,8 +162,7 @@ export const Language = ({isMobile}:any) => {
                     <Listbox.Options
                         className="absolute mt-1 w-full py-1 overflow-auto bg-gray-200 rounded-xl shadow-lg max-h-60 focus:outline-none text-sm">
                         {languages.map((language) => (
-
-                                <Listbox.Option
+                            <Listbox.Option
                                     key={language.code}
                                     value={language}
                                     className={({active}) =>
@@ -232,6 +245,37 @@ export const FooterLink = ({ name, links, isMobile }: FooterLinkInterface) => {
                     </div>
                 );
             })}
+        </div>
+    )
+}
+
+export const ColorCards = ({color, text, icon, number1, number2, textColor}: ColorCardInterface) => {
+    return(
+        <div className={`flex flex-col w-full justify-between items-center ${color}  gap-2  rounded-2xl`} style={{color:`#${textColor}`}}>
+            <div>
+                <div className={`flex text-5xl md:text-6xl px-3 pt-3 md:pt-6 self-start`}>
+                    <p className={`font-bold`}>{number1}</p>
+                    <p>{number2}</p>
+                </div>
+                <p className={`text-sm px-3 pt-3`}>{text}</p>
+            </div>
+            <div className={`flex justify-end w-full `}>
+                <Image src={icon} alt={number1} width={120} height={120}/>
+            </div>
+        </div>
+    )
+}
+
+export const GraphCard = ({mainText, graph}: GraphCardInterface) => {
+    return(
+        <div className={`flex flex-col w-full bg-gray-200 px-2 md:px-5  py-3 rounded-2xl`} >
+            <div className={`flex justify-between text-gray-700 pb-2`}>
+                <p className={`font-bold `}>{mainText}</p>
+                <BsThreeDotsVertical className={`text-xl cursor-pointer`}/>
+            </div>
+            <div className={`flex overflow-auto justify-end w-full text-9xl p-5 bg-white rounded-2xl`}>
+                {graph}
+            </div>
         </div>
     )
 }

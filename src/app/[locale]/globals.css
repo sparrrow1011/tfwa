@@ -224,9 +224,13 @@
 }
 
 .orange { background-color: #ff5a5a; }
+.orange-item { background-color: rgba(238, 144, 113, 0.3); }
 .yellow { background-color: #deb043; }
+.yellow-item { background-color: rgba(246, 231, 111, 0.3); }
 .green { background-color: #1eb175; }
+.green-item { background-color: rgba(89, 178, 145, 0.3); }
 .blue { background-color: #5da8e2; }
+.blue-item { background-color: rgba(167, 201, 228, 0.3); }
 
 .hover\:bg-color-1:hover {
   --tw-bg-opacity: 1;

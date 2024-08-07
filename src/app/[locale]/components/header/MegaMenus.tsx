@@ -107,23 +107,23 @@ export const MegaMenuAnalyticsMobile = ({ setIsAnalytics }: any) => {
 }
 
 export const MegaMenuCountries = ({ name, isMobile }: MegaMenuInterface) => {
-    const t = useTranslations('Navigation')
+    const t = useTranslations('')
     const links = [
         {href: '/benin', label: `${t('Benin')}`, code: 'BJ', flag: '/flags/BJ.png'},
-        {href: '/burkina-faso', label: 'Burkina Faso', code: 'BF', flag: '/flags/BF.png'},
-        {href: '/cabo-verde', label: 'Cabo Verde', code: 'CV', flag: '/flags/CV.png'},
-        {href: '/cote-d-ivoire', label: 'Cote Divoire', code: 'CI', flag: '/flags/CI.png'},
-        {href: '/gambia', label: 'Gambia', code: 'GM', flag: '/flags/GM.png'},
-        {href: '/ghana', label: 'Ghana', code: 'GH', flag: '/flags/GH.png'},
-        {href: '/guinea', label: 'Guinea', code: 'GN', flag: '/flags/GN.png'},
-        {href: '/guinea-bissau', label: 'Guinea-Bissau', code: 'GW', flag: '/flags/GW.png'},
-        {href: '/liberia', label: 'Liberia', code: 'LR', flag: '/flags/LR.png'},
-        {href: '/mali', label: 'Mali', code: 'ML', flag: '/flags/ML.png'},
-        {href: '/niger', label: 'Niger', code: 'NE', flag: '/flags/NE.png'},
-        {href: '/nigeria', label: 'Nigeria', code: 'NG', flag: '/flags/NG.png'},
-        {href: '/senegal', label: 'Senegal', code: 'SN', flag: '/flags/SN.png'},
-        {href: '/sierra-leone', label: 'Sierra-Leone', code: 'SL', flag: '/flags/SL.png'},
-        {href: '/togo', label: 'Togo', code: 'TG', flag: '/flags/TG.png'}
+        {href: '/burkina-faso', label: `${t('Burkina_Faso')}`, code: 'BF', flag: '/flags/BF.png'},
+        {href: '/cabo-verde', label: `${t('Cape_Verde')}`, code: 'CV', flag: '/flags/CV.png'},
+        {href: '/cote-d-ivoire', label: `${t('Ivory_Coast')}`, code: 'CI', flag: '/flags/CI.png'},
+        {href: '/gambia', label: `${t('Gambia')}`, code: 'GM', flag: '/flags/GM.png'},
+        {href: '/ghana', label: `${t('Ghana')}`, code: 'GH', flag: '/flags/GH.png'},
+        {href: '/guinea', label: `${t('Guinea')}`, code: 'GN', flag: '/flags/GN.png'},
+        {href: '/guinea-bissau', label: `${t('Guinea_Bissau')}`, code: 'GW', flag: '/flags/GW.png'},
+        {href: '/liberia', label: `${t('Liberia')}`, code: 'LR', flag: '/flags/LR.png'},
+        {href: '/mali', label: `${t('Mali')}`, code: 'ML', flag: '/flags/ML.png'},
+        {href: '/niger', label: `${t('Niger')}`, code: 'NE', flag: '/flags/NE.png'},
+        {href: '/nigeria', label: `${t('Nigeria')}`, code: 'NG', flag: '/flags/NG.png'},
+        {href: '/senegal', label: `${t('Senegal')}`, code: 'SN', flag: '/flags/SN.png'},
+        {href: '/sierra-leone', label: `${t('Sierra_Leone')}`, code: 'SL', flag: '/flags/SL.png'},
+        {href: '/togo', label: `${t('Togo')}`, code: 'TG', flag: '/flags/TG.png'}
     ]
 
     return (
@@ -139,7 +139,7 @@ export const MegaMenuCountries = ({ name, isMobile }: MegaMenuInterface) => {
                     <div className="menu-background shadow-xl flex container mx-auto p-10">
                         <div className={`flex gap-4 justify-evenly`}>
                             <div className={`w-8/12 flex px-5`}>
-                                <p className={`font-bold color-1 whitespace-nowrap mr-7`}>Explore Country Pages</p>
+                                <p className={`font-bold color-1 whitespace-nowrap mr-7`}>{t('Explore')}</p>
                                 <div className={`w-full flex flex-row justify-evenly border-r-gray-500`}>
                                     <div className="flex flex-col gap-7">
                                         {links.slice(0, 5).map((link) => (

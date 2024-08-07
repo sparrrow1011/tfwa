@@ -15,6 +15,7 @@ export default function ThemeSwitch() {
   const ref = useRef(null)
   useEffect(() => setMounted(true), [])
   useOnClickOutside(ref, () => setIsOpen(false))
+
   if (!mounted)
     return (
       <Button
@@ -37,9 +38,7 @@ export default function ThemeSwitch() {
   return (
     <div ref={ref} className='relative inline-block text-left'>
       <Button
-        size='small'
-        type='button'
-        className='text-destructive inline-flex w-full min-w-[95px] items-center justify-between gap-3'
+        className='text-destructive h-9 inline-flex w-full rounded-full bg-button py-2 pl-3 pr-3 min-w-[95px] items-center justify-between gap-3'
         id='options-menu'
         aria-expanded={isOpen}
         onClick={toggleDropdown}
@@ -48,7 +47,7 @@ export default function ThemeSwitch() {
         <FiSun />
       </Button>
       {isOpen && (
-        <div className='absolute right-0 mt-2 w-full origin-top-right rounded-md bg-dropdown shadow-lg'>
+        <div className='absolute z-50 right-0 mt-2 w-full origin-top-right bg-gray-200 rounded-xl shadow-lg max-h-60 focus:outline-none text-sm'>
           <div
             className='py-1'
             role='menu'
@@ -63,9 +62,9 @@ export default function ThemeSwitch() {
                     setTheme(themeItem)
                     setIsOpen(false)
                   }}
-                  className={`block w-full px-4 py-2 text-left text-sm hover:bg-dropdownHover ${
+                  className={`block w-full  px-4 py-2 text-left text-sm hover:bg-dropdownHover ${
                     themeItem === theme
-                      ? 'bg-selected text-primary hover:bg-selected'
+                      ? 'bg-selected rounded-xl text-primary hover:bg-selected'
                       : 'text-secondary'
                   }`}
                 >

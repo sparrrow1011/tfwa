@@ -57,3 +57,23 @@ export interface FooterLinkInterface {
     name: string;
     // icon?: any;
 }
+
+export interface ColorCardInterface {
+    color: string;
+    text: string;
+    icon: any;
+    number1: string;
+    number2: string;
+    textColor: string;
+}
+
+export interface GraphCardInterface {
+    mainText: string;
+    graph: any;
+}
+
+
+export interface GraphInterface {
+    name: string;
+    data: any;
+}
